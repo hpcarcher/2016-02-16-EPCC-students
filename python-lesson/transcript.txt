@@ -1,0 +1,1398 @@
+Script started on Thu Apr 16 14:38:23 2015
+bash-3.2$ Kipython
+Python 2.7.9 (default, Feb 10 2015, 03:28:08)
+Type "copyright", "credits" or "license" for more information.
+
+IPython 3.1.0 -- An enhanced Interactive Python.
+?	  -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help	  -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+0;34mIn [1;34m10;34m]: 0mKimport numpy
+
+0;34mIn [1;34m20;34m]: 0mdata = numpy.load
+numpy.load     numpy.loads    numpy.loadtxt
+
+0;34mIn [1;34m20;34m]: 0mdata = numpy.loadtxt(fname="data/in
+data/inflammation-01.csv  data/inflammation-04.csv  data/inflammation-07.csv  data/inflammation-10.csv
+data/inflammation-02.csv  data/inflammation-05.csv  data/inflammation-08.csv  data/inflammation-11.csv
+data/inflammation-03.csv  data/inflammation-06.csv  data/inflammation-09.csv  data/inflammation-12.csv
+
+0;34mIn [1;34m20;34m]: 0mdata = numpy.loadtxt(fname="data/inflammation-01.csv",Kdekliniter=",")
+0;31m---------------------------------------------------------------------------0m
+0;31mTypeError0m				 Traceback (most recent call last)
+0;32m<ipython-input-2-fef52b77ed1d>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mdata0m 0;34m=0m 0mnumpy0m0;34m.0m0mloadtxt0m0;34m(0m0mfname0m0;34m=0m0;34m"data/inflammation-01.csv"0m0;34m,0m0mdeliniter0m0;34m=0m0;34m","0m0;34m)0m0;34m0m0m
+0m
+0;31mTypeError0m: loadtxt() got an unexpected keyword argument 'deliniter'
+
+0;34mIn [1;34m30;34m]: 0mdata = numpy.loadtxt(fname="data/inflammation-01.csv",deli1Pmiter=",")
+
+0;34mIn [1;34m40;34m]: 0mdata.shape
+0;31mOut[1;31m40;31m]: 0m(60, 40)
+
+0;34mIn [1;34m50;34m]: 0mprint data d.shape
+(60, 40)
+
+0;34mIn [1;34m60;34m]: 0mprint data[0,0]
+0.0
+
+0;34mIn [1;34m70;34m]: 0mprint data[0,339]
+0.0
+
+0;34mIn [1;34m80;34m]: 0mprint data[0:5,0,10]
+0;31m---------------------------------------------------------------------------0m
+0;31mIndexError0m				 Traceback (most recent call last)
+0;32m<ipython-input-8-366f930de724>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0;32mprint0m 0mdata0m0;34m[0m0;36m00m0;34m:0m0;36m50m0;34m,0m0;36m00m0;34m,0m0;36m100m0;34m]0m0;34m0m0m
+0m
+0;31mIndexError0m: too many indices for array
+
+0;34mIn [1;34m90;34m]: 0mprint data[0:5,01P:10]
+[[ 0.  0.  1.  3.  1.  2.  4.  7.  8.  3.]
+ [ 0.  1.  2.  1.  2.  1.  3.  2.  2.  6.]
+ [ 0.  1.  1.  3.  3.  2.  6.  2.  5.  9.]
+ [ 0.  0.  2.  0.  4.  2.  2.  1.  6.  7.]
+ [ 0.  1.  1.  3.  3.  1.  3.  5.  2.  4.]]
+
+0;34mIn [1;34m100;34m]: 0mprint data[0:1P2,CCC1P11P2]
+[[ 0.  0.]
+ [ 0.  1.]]
+
+0;34mIn [1;34m110;34m]: 0msmall = data[:3,36:]
+
+0;34mIn [1;34m120;34m]: 0mpritn small
+0;36m  File 0;32m"<ipython-input-12-72b4e5247d8a>"0;36m, line 0;32m10m
+0;31m	 pritn small0m
+0m		^0m
+0;31mSyntaxError0m0;31m:0m invalid syntax
+
+
+0;34mIn [1;34m130;34m]: 0mprint small
+[[ 2.  3.  0.  0.]
+ [ 1.  1.  0.  1.]
+ [ 2.  2.  1.  1.]]
+
+0;34mIn [1;34m140;34m]: 0msmall diooublesmall - 2.0=2.0*small
+
+0;34mIn [1;34m150;34m]: 0mprint small
+[[ 2.  3.  0.  0.]
+ [ 1.  1.  0.  1.]
+ [ 2.  2.  1.  1.]]
+
+0;34mIn [1;34m160;34m]: 0mprint doublesmall
+[[ 4.  6.  0.  0.]
+ [ 2.  2.  0.  2.]
+ [ 4.  4.  2.  2.]]
+
+0;34mIn [1;34m170;34m]: 0msmartriplesmall = doublemsall + small
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-17-7e2c0645138e>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mtriplesmall0m 0;34m=0m 0mdoublemsall0m 0;34m+0m 0msmall0m0;34m0m0m
+0m
+0;31mNameError0m: name 'doublemsall' is not defined
+
+0;34mIn [1;34m180;34m]: 0mtriplesmall CCCCCCCCsmCll + small
+
+0;34mIn [1;34m190;34m]: 0mprint triplesmall
+[[ 6.  9.  0.  0.]
+ [ 3.  3.  0.  3.]
+ [ 6.  6.  3.  3.]]
+
+0;34mIn [1;34m200;34m]: 0mprint data.
+data.T		   data.copy	      data.imag 	 data.ravel	    data.sum
+data.all	   data.ctypes	      data.item 	 data.real	    data.swapaxes
+data.any	   data.cumprod       data.itemset	 data.repeat	    data.take
+data.argmax	   data.cumsum	      data.itemsize	 data.reshape	    data.tobytes
+data.argmin	   data.data	      data.max		 data.resize	    data.tofile
+data.argpartition  data.diagonal      data.mean 	 data.round	    data.tolist
+data.argsort	   data.dot	      data.min		 data.searchsorted  data.tostring
+data.astype	   data.dtype	      data.nbytes	 data.setfield	    data.trace
+data.base	   data.dump	      data.ndim 	 data.setflags	    data.transpose
+data.byteswap	   data.dumps	      data.newbyteorder  data.shape	    data.var
+data.choose	   data.fill	      data.nonzero	 data.size	    data.view
+data.clip	   data.flags	      data.partition	 data.sort
+data.compress	   data.flat	      data.prod 	 data.squeeze
+data.conj	   data.flatten       data.ptp		 data.std
+data.conjugate	   data.getfield      data.put		 data.strides
+
+0;34mIn [1;34m200;34m]: 0mprint data.max()
+20.0
+
+0;34mIn [1;34m210;34m]: 0mprint data.ma11Pin()
+0.0
+
+0;34mIn [1;34m220;34m]: 0mprint data.mi111Pavg()
+0;31m---------------------------------------------------------------------------0m
+0;31mAttributeError0m				 Traceback (most recent call last)
+0;32m<ipython-input-22-c1c3d7ee5908>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0;32mprint0m 0mdata0m0;34m.0m0mavg0m0;34m(0m0;34m)0m0;34m0m0m
+0m
+0;31mAttributeError0m: 'numpy.ndarray' object has no attribute 'avg'
+
+0;34mIn [1;34m230;34m]: 0mprint data.avgCCmean()
+6.14875
+
+0;34mIn [1;34m240;34m]: 0mprint data.mea1111Pstd()
+4.61383319712
+
+0;34mIn [1;34m250;34m]: 0m
+
+0;34mIn [1;34m250;34m]: 0mndata.argmax()
+0;31mOut[1;31m250;31m]: 0m300
+
+0;34mIn [1;34m260;34m]: 0mdata.argmax()x?
+0;31mDocstring:0m
+a.argmax(axis=None, out=None)
+
+Return indices of the maximum values along the given axis.
+
+Refer to `numpy.argmax` for full documentation.
+
+See Also
+--------
+numpy.argmax : equivalent function
+0;31mType:	0mbuiltin_function_or_method
+
+0;34mIn [1;34m270;34m]: 0mdata.argmax?(axis=0)
+0;31mOut[1;31m270;31m]: 0m
+array([ 0,  1,	1,  0,	3,  8,	2,  0,	0,  2,	1,  1,	9,  3, 27,  2, 46,
+       12,  5,	7,  7, 16,  5,	2, 26,	3, 15,	8,  5,	3,  2,	7, 22,	0,
+	8,  1,	5,  0,	3,  1])
+
+0;34mIn [1;34m280;34m]: 0mdata.argmax(axis=11111Pmax()
+0;31mOut[1;31m280;31m]: 0m20.0
+
+0;34mIn [1;34m290;34m]: 0mddata.argmax()
+0;31mOut[1;31m290;31m]: 0m300
+
+0;34mIn [1;34m300;34m]: 0mpatieent0 = data[0,:]
+
+0;34mIn [1;34m310;34m]: 0mpprintrint patient0
+[  0.	0.   1.   3.   1.   2.	 4.   7.   8.	3.   3.   3.  10.   5.	 7.
+   4.	7.   7.  12.  18.   6.	13.  11.  11.	7.   7.   4.   6.   8.	 8.
+   4.	4.   5.   7.   3.   4.	 2.   3.   0.	0.]
+
+CCCCCCCCC7Pdat!wcP-lxdata/infheada-1edata/inflCCCCatient0 = data[0,:]
+data/inflammation-01.csv  data/inflammation-04.csv  data/inflammation-07.csv  data/inflammation-10.csv
+data/inflammation-02.csv  data/inflammation-05.csv  data/inflammation-08.csv  data/inflammation-11.csv
+data/inflammation-03.csv  data/inflammation-06.csv  data/inflammation-09.csv  data/inflammation-12.csv
+
+0;34mIn [1;34m320;34m]: 0m!head -1 data/inflammation-01.csv
+0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
+
+0;34mIn [1;34m330;34m]: 0mtype(patient0)
+0;31mOut[1;31m330;31m]: 0mnumpy.ndarray
+
+CCCCCCCCC19Pprint;patient0patineetmnmtnt0.max()CC!head -1 data/inflammation-01.csv
+0;31mOut[1;31m340;31m]: 0m18.0
+
+0;34mIn [1;34m350;34m]: 0mpatient0.ma111Pmean()
+0;31mOut[1;31m350;31m]: 0m5.4500000000000002
+
+0;34mIn [1;34m360;34m]: 0mdata.mennan(qaaxis=1)
+0;31mOut[1;31m360;31m]: 0m
+array([ 5.45 ,	5.425,	6.1  ,	5.9  ,	5.55 ,	6.225,	5.975,	6.65 ,
+	6.625,	6.525,	6.775,	5.8  ,	6.225,	5.75 ,	5.225,	6.3  ,
+	6.55 ,	5.7  ,	5.85 ,	6.55 ,	5.775,	5.825,	6.175,	6.1  ,
+	5.8  ,	6.425,	6.05 ,	6.025,	6.175,	6.55 ,	6.175,	6.35 ,
+	6.725,	6.125,	7.075,	5.725,	5.925,	6.15 ,	6.075,	5.75 ,
+	5.975,	5.725,	6.3  ,	5.9  ,	6.75 ,	5.925,	7.225,	6.15 ,
+	5.95 ,	6.275,	5.7  ,	6.1  ,	6.825,	5.975,	6.725,	5.7  ,
+	6.25 ,	6.4  ,	7.05 ,	5.9  ])
+
+0;34mIn [1;34m370;34m]: 0mdata.mean(axis=1P0)
+0;31mOut[1;31m370;31m]: 0m
+array([  0.	   ,   0.45	 ,   1.11666667,   1.75      ,
+	 2.43333333,   3.15	 ,   3.8       ,   3.88333333,
+	 5.23333333,   5.51666667,   5.95      ,   5.9	     ,
+	 8.35	   ,   7.73333333,   8.36666667,   9.5	     ,
+	 9.58333333,  10.63333333,  11.56666667,  12.35      ,
+	13.25	   ,  11.96666667,  11.03333333,  10.16666667,
+	10.	   ,   8.66666667,   9.15      ,   7.25      ,
+	 7.33333333,   6.58333333,   6.06666667,   5.95      ,
+	 5.11666667,   3.6	 ,   3.3       ,   3.56666667,
+	 2.48333333,   1.5	 ,   1.13333333,   0.56666667])
+
+0;34mIn [1;34m380;34m]: 0mdata.mean(axis=0).shape
+0;31mOut[1;31m380;31m]: 0m(40,)
+
+0;34mIn [1;34m390;34m]: 0mdata.mean(axis=0).shape1).shape
+0;31mOut[1;31m390;31m]: 0m(60,)
+
+0;34mIn [1;34m400;34m]: 0melement="oxygen"
+
+0;34mIn [1;34m410;34m]: 0mprint element[0]
+o
+
+0;34mIn [1;34m420;34m]: 0mprint element[1P-1]
+n
+
+0;34mIn [1;34m430;34m]: 0mprint element[1:-1]
+xyge
+
+0;34mIn [1;34m440;34m]: 0mprint element[1:-1P2]
+xyg
+
+0;34mIn [1;34m450;34m]: 0melemnent[0]="c"
+0;31m---------------------------------------------------------------------------0m
+0;31mTypeError0m				 Traceback (most recent call last)
+0;32m<ipython-input-45-06a2e34417fa>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0melement0m0;34m[0m0;36m00m0;34m]0m0;34m=0m0;34m"c"0m0;34m0m0m
+0m
+0;31mTypeError0m: 'str' object does not support item assignment
+
+0;34mIn [1;34m460;34m]: 0mprint element[3:3]
+
+
+0;34mIn [1;34m470;34m]: 0mprint [e[first:last} ] first -> last-1
+0;36m  File 0;32m"<ipython-input-47-29b679917f77>"0;36m, line 0;32m10m
+0;31m	 print e[first:last] first -> last-10m
+0m			      ^0m
+0;31mSyntaxError0m0;31m:0m invalid syntax
+
+
+0;34mIn [1;34m480;34m]: 0mprint 1@"CCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+e[first:last] first -> last-1
+
+0;34mIn [1;34m490;34m]: 0mfrom matplotlib import pyplot
+
+0;34mIn [1;34m500;34m]: 0mpyplot.imsho(data)
+0;31m---------------------------------------------------------------------------0m
+0;31mAttributeError0m				 Traceback (most recent call last)
+0;32m<ipython-input-50-b848c11247b3>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mpyplot0m0;34m.0m0mimsho0m0;34m(0m0mdata0m0;34m)0m0;34m0m0m
+0m
+0;31mAttributeError0m: 'module' object has no attribute 'imsho'
+
+0;34mIn [1;34m510;34m]: 0mpyplot.imshow(data)
+0;31mOut[1;31m510;31m]: 0m<matplotlib.image.AxesImage at 0x1138b9790>
+
+0;34mIn [1;34m520;34m]: 0mpyplot.show()
+
+0;34mIn [1;34m530;34m]: 0mpyplot.show()imshow(data_)
+0;31mOut[1;31m530;31m]: 0m<matplotlib.image.AxesImage at 0x114b85990>
+
+0;34mIn [1;34m540;34m]: 0mpuyoplot.colorbar()
+0;31mOut[1;31m540;31m]: 0m<matplotlib.colorbar.Colorbar instance at 0x10fd42878>
+
+0;34mIn [1;34m550;34m]: 0mpyplot.imshow()show()
+
+0;34mIn [1;34m560;34m]: 0mavgin_inflammation = data.mean(axis=0)
+
+0;34mIn [1;34m570;34m]: 0mavg_inflmamammation.shape
+0;31mOut[1;31m570;31m]: 0m(40,)
+
+0;34mIn [1;34m580;34m]: 0mpuplotyplot.plot(avg_inflammation)
+0;31mOut[1;31m580;31m]: 0m[<matplotlib.lines.Line2D at 0x115a96290>]
+
+0;34mIn [1;34m590;34m]: 0mpuyplot.show()
+
+0;34mIn [1;34m600;34m]: 0mpyplot.plot(data.max(maxis-9=0))
+0;31mOut[1;31m600;31m]: 0m[<matplotlib.lines.Line2D at 0x1149eafd0>]
+
+0;34mIn [1;34m610;34m]: 0mpypolot.show()
+
+0;34mIn [1;34m620;34m]: 0mpyplot.show111111111111PKpyplot.plot(data.min(axis=0))
+0;31mOut[1;31m620;31m]: 0m[<matplotlib.lines.Line2D at 0x115ba2f10>]
+
+0;34mIn [1;34m630;34m]: 0mpypot.show()
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-63-b5175dd562e7>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mpypot0m0;34m.0m0mshow0m0;34m(0m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'pypot' is not defined
+
+0;34mIn [1;34m640;34m]: 0mpyplot.show()
+
+CCCCCCCCCCCCCCCCsplot(data.ma111Pmean(axis=0))in(axis=0))CCCCCCCCCCCCCCCCsplot(data.max(axis=0))
+0;31mOut[1;31m650;31m]: 0m[<matplotlib.lines.Line2D at 0x1163ff750>]
+
+0;34mIn [1;34m660;34m]: 0mpyplot.plot(data.mea111Pax(axis=0))
+0;31mOut[1;31m660;31m]: 0m[<matplotlib.lines.Line2D at 0x11640d090>]
+
+0;34mIn [1;34m670;34m]: 0mpyplot.plot(data.ma11Pin(axis=0))
+0;31mOut[1;31m670;31m]: 0m[<matplotlib.lines.Line2D at 0x1163ffe10>]
+
+0;34mIn [1;34m680;34m]: 0mpyplot.show()
+
+0;34mIn [1;34m690;34m]: 0mpyplot.fituregure(figsize(10.0,3.0))
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-69-cb282a7bac01>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mpyplot0m0;34m.0m0mfigure0m0;34m(0m0mfigsize0m0;34m(0m0;36m10.00m0;34m,0m0;36m3.00m0;34m)0m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'figsize' is not defined
+
+0;34mIn [1;34m700;34m]: 0mpyplot.figure(figsize=(10.0,3.0))
+0;31mOut[1;31m700;31m]: 0m<matplotlib.figure.Figure at 0x10db033d0>
+
+0;34mIn [1;34m710;34m]: 0mpypplot.syuptitle("inflamatiomatio-01")
+0;31mOut[1;31m710;31m]: 0m<matplotlib.text.Text at 0x11622de90>
+
+0;34mIn [1;34m720;34m]: 0moktpyplot.subplot(1,3,1)
+0;31mOut[1;31m720;31m]: 0m<matplotlib.axes._subplots.AxesSubplot at 0x11622df50>
+
+0;34mIn [1;34m730;34m]: 0mpyp;!ls
+01-numpy.html		03-loop.ipynb		05-defensive.pptx	Intro.pptx
+01-numpy.ipynb		03-loop.pptx		06-cmdline.html 	code
+01-numpy.pptx		04-cond.html		06-cmdline.ipynb	data
+02-func.html		04-cond.ipynb		06-cmdline.pptx 	img
+02-func.ipynb		04-cond.pptx		07-errors.html		output.txt
+02-func.pptx		05-defensive.html	07-errors.ipynb
+03-loop.html		05-defensive.ipynb	07-errors.pptx
+
+0;34mIn [1;34m740;34m]: 0m!ls datacode
+__init__.py		errors_01.py		outer.py		readings-06.py
+analyse.py		errors_02.py		readings-01.py		rectangle.py
+analyse_all.py		expo.py 		readings-02.py		rev.py
+argv-list.py		fence.py		readings-03.py		rev_fast.py
+arith.py		gen-inflammation.py	readings-04.py		sum_inplace.py
+count-stdin.py		near.py 		readings-05.py		sys-version.py
+
+0;34mIn [1;34m750;34m]: 0m!more coede/gen-inflammation.py
+?1h#!/usr/bin/env python
+
+'''Generate pseudo-random patient inflammation data for use in Python lessons.'''
+
+import sys
+import random
+
+n_patients = 60
+n_days = 40
+n_range = 20
+
+middle = n_days / 2
+
+for p in range(n_patients):
+    vals = []
+    for d in range(n_days):
+	upper = max(n_range - abs(d - middle), 0)
+	vals.append(random.randint(upper/4, upper))
+    print ','.join([str(v) for v in vals])
+K?1l
+0;34mIn [1;34m760;34m]: 0m%cpaste
+Pasting code; enter '--' alone on the line to stop or use Ctrl-D.
+:import numpy as np
+:from matplotlib import pyplot as plt
+:
+:data = np.loadtxt(fname='data/inflammation-01.csv', delimiter=',')
+:
+:plt.figure(figsize=(10.0, 3.0))
+:
+:plt.suptitle("inflammation-01")
+:
+:plt.subplot(1, 3, 1)
+:plt.ylabel('average')
+:plt.plot(data.mean(0))
+:
+:plt.subplot(1, 3, 2)
+:plt.ylabel('max')
+:plt.plot(data.max(0))
+:
+:plt.subplot(1, 3, 3)
+:plt.ylabel('min')
+:plt.plot(data.min(0))
+:
+:plt.tight_layout()
+:plt.show()
+:--
+/Library/Python/2.7/site-packages/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+
+0;34mIn [1;34m770;34m]: 0m
+
+0;34mIn [1;34m770;34m]: 0m
+
+0;34mIn [1;34m770;34m]: 0mdef fahr)ti=_to_kelivibnn(temp):
+0;34m	....: 0m    return(1P(CCCCCCCCCCCCCC+273.15
+0;34m	....: 0m
+
+0;34mIn [1;34m780;34m]: 0mfahr)_to_kelvin??
+0;31mSignature: 0m0mfahr_to_kelvin0m0;34m(0m0mtemp0m0;34m)0m0;34m0m0m
+0;31mSource:0m
+def fahr_to_kelvin(temp):
+    return (temp-32)*(5/9)+273.15
+0;31mFile:	0m~/2015-04-16-imperial-students/python/<ipython-input-77-5c01b2b07dae>
+0;31mType:	0mfunction
+
+0;34mIn [1;34m790;34m]: 0mrppprint fahr_to_kelvin(32)
+273.15
+
+0;34mIn [1;34m800;34m]: 0mprint fahr_to_kelvin(212)
+273.15
+
+0;34mIn [1;34m810;34m]: 0mpritnnt 212-32
+180
+
+0;34mIn [1;34m820;34m]: 0mpritn (p212-32)*(5/9)
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-82-4cc88030f88f>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mpritn0m 0;34m(0m0;36m2120m0;34m-0m0;36m320m0;34m)0m0;34m*0m0;34m(0m0;36m50m0;34m/0m0;36m90m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'pritn' is not defined
+
+0;34mIn [1;34m830;34m]: 0mprint (212-32)*(5/9)
+0
+
+0;34mIn [1;34m840;34m]: 0mprint 5/9
+0
+
+0;34mIn [1;34m850;34m]: 0mprint 5.0/9
+0.555555555556
+
+0;34mIn [1;34m860;34m]: 0mprint float(5)/9
+0.555555555556
+
+0;34mIn [1;34m870;34m]: 0mprint float(51P/C)
+0.0
+
+0;34mIn [1;34m880;34m]: 0m10/233
+0;31mOut[1;31m880;31m]: 0m3
+
+0;34mIn [1;34m890;34m]: 0m10.0/3
+0;31mOut[1;31m890;31m]: 0m3.3333333333333335
+
+CCCCCCCCCdefafahr_to_kelvin(temp):32)2(212-32)*(5/9)CCCCCCCCCCCCtnCCCCCCCCCCCCCCC
+    return (temp-32)*(5.0/C.0)CCCCCCC
+0;34m	....: 0m
+
+0;34mIn [1;34m910;34m]: 0mfarhr_to_kevlin(32)
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-91-a29b7f7d75e7>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mfarhr_to_kevlin0m0;34m(0m0;36m320m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'farhr_to_kevlin' is not defined
+
+0;34mIn [1;34m920;34m]: 0mfarhr_to1P_to_kelvin(32)
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-92-13133dc72608>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mfarh_to_kelvin0m0;34m(0m0;36m320m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'farh_to_kelvin' is not defined
+
+CCCCCCCCCCCCr_to_kelvin(32)ar1P_to_kelvin(32)CCCCCCCCCCC1P_to_kelvin(32)
+0;31mOut[1;31m930;31m]: 0m273.15
+
+0;34mIn [1;34m940;34m]: 0mfahr_to_kelvin(311P212)
+0;31mOut[1;31m940;31m]: 0m373.15
+
+0;34mIn [1;34m950;34m]: 0mdef Kelvin kelvin_to_ecleelsisus(tmemp):
+0;34m	....: 0m    retrunurn temp -27 273.15
+0;34m	....: 0m
+
+0;34mIn [1;34m960;34m]: 0mdef fahr_to_celislsCCCCCCCCCC
+0;34m	....: 0m    temp_k = fahr_to_kelvin(temp)
+0;34m	....: 0m    resutlt = kevlvin_to_celsiius(temp_k)
+0;34m	....: 0m    return (result)
+0;34m	....: 0m
+
+0;34mIn [1;34m970;34m]: 0mfahr(_to_celsius(32)
+0;31mOut[1;31m970;31m]: 0m0.0
+
+0;34mIn [1;34m980;34m]: 0mfahr_to_celsius(311P212)
+0;31mOut[1;31m980;31m]: 0m100.0
+
+0;34mIn [1;34m990;34m]: 0m"a"+b"b"
+0;31mOut[1;31m990;31m]: 0m'ab'
+
+0;34mIn [1;34m1000;34m]: 0mfen# fence("name","*") -> *name*
+
+0;34mIn [1;34m1010;34m]: 0mdef fence(str1,str2):
+0;34m	.....: 0m    trreturn str2+str1+str2
+0;34m	.....: 0m
+
+0;34mIn [1;34m1020;34m]: 0mdefence("name","*")
+0;31mOut[1;31m1020;31m]: 0m'*name*'
+
+0;34mIn [1;34m1030;34m]: 0mdef center(data,desired):
+0;34m	.....: 0m    return( data(data -d data.mean() ) + desired
+0;34m	.....: 0m
+
+0;34mIn [1;34m1040;34m]: 0mnumpy.zer(9o((2,2))
+0;31m---------------------------------------------------------------------------0m
+0;31mAttributeError0m				 Traceback (most recent call last)
+0;32m<ipython-input-104-8f7e963537af>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mnumpy0m0;34m.0m0mzero0m0;34m(0m0;34m(0m0;36m20m0;34m,0m0;36m20m0;34m)0m0;34m)0m0;34m0m0m
+0m
+0;31mAttributeError0m: 'module' object has no attribute 'zero'
+
+0;34mIn [1;34m1050;34m]: 0mnumpy.zeros((2,2))
+0;31mOut[1;31m1050;31m]: 0m
+array([[ 0.,  0.],
+       [ 0.,  0.]])
+
+CCCCCCCCCCCC4m1060;34m]: 0mznumpy.zeros((2,2))CCCCCCCCCCC=numpy.zeros((2,2))
+
+0;34mIn [1;34m1070;34m]: 0mcenter(z,3)
+0;31mOut[1;31m1070;31m]: 0m
+array([[ 3.,  3.],
+       [ 3.,  3.]])
+
+0;34mIn [1;34m1080;34m]: 0mcenter(data,0)
+0;31mOut[1;31m1080;31m]: 0m
+array([[-6.14875, -6.14875, -5.14875, ..., -3.14875, -6.14875, -6.14875],
+       [-6.14875, -5.14875, -4.14875, ..., -5.14875, -6.14875, -5.14875],
+       [-6.14875, -5.14875, -5.14875, ..., -4.14875, -5.14875, -5.14875],
+       ...,
+       [-6.14875, -5.14875, -5.14875, ..., -5.14875, -5.14875, -5.14875],
+       [-6.14875, -6.14875, -6.14875, ..., -6.14875, -4.14875, -6.14875],
+       [-6.14875, -6.14875, -5.14875, ..., -5.14875, -5.14875, -6.14875]])
+
+0;34mIn [1;34m1090;34m]: 0mdata.mean()
+0;31mOut[1;31m1090;31m]: 0m6.1487499999999997
+
+0;34mIn [1;34m1100;34m]: 0mdata.min(),data.mean9(), data.max()
+0;31mOut[1;31m1100;31m]: 0m(0.0, 6.1487499999999997, 20.0)
+
+0;34mIn [1;34m1110;34m]: 0mdata.min(),daCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCKcentered = center(data,0)
+
+0;34mIn [1;34m1120;34m]: 0mcentered.min(),centered.maean(),centered.max()
+0;31mOut[1;31m1120;31m]: 0m(-6.1487499999999997, 2.8421709430404008e-16, 13.85125)
+
+0;34mIn [1;34m1130;34m]: 0mdata.std(), centered.std()
+0;31mOut[1;31m1130;31m]: 0m(4.6138331971185664, 4.6138331971185664)
+
+0;34mIn [1;34m1140;34m]: 0mhelp(centered)
+?1049h?1hHelp on ndarray object:
+
+class 1mndarray0m(__builtin__.object)
+ |  ndarray(shape, dtype=float, buffer=None, offset=0,
+ |	    strides=None, order=None)
+ |
+ |  An array object represents a multidimensional, homogeneous array
+ |  of fixed-size items.  An associated data-type object describes the
+ |  format of each element in the array (its byte-order, how many bytes it
+ |  occupies in memory, whether it is an integer, a floating point number,
+ |  or something else, etc.)
+ |
+ |  Arrays should be constructed using `array`, `zeros` or `empty` (refer
+ |  to the See Also section below).  The parameters given here refer to
+ |  a low-level method (`ndarray(...)`) for instantiating an array.
+ |
+ |  For more information, refer to the `numpy` module and examine the
+ |  the methods and attributes of an array.
+ |
+ |  Parameters
+ |  ----------
+ |  (for the __new__ method; see Notes below)
+ |
+ |  shape : tuple of ints
+ |	Shape of created array.
+ |  dtype : data-type, optional
+:KK |	   Any object that can be interpreted as a numpy data type.
+ |  buffer : object exposing buffer interface, optional
+ |	Used to fill the array with data.
+ |  offset : int, optional
+ |	Offset of array data in buffer.
+ |  strides : tuple of ints, optional
+ |	Strides of data in memory.
+ |  order : {'C', 'F'}, optional
+ |	Row-major or column-major order.
+ |
+ |  Attributes
+ |  ----------
+ |  T : ndarray
+ |	Transpose of the array.
+ |  data : buffer
+ |	The array's elements, in memory.
+ |  dtype : dtype object
+ |	Describes the format of the elements in the array.
+ |  flags : dict
+ |	Dictionary containing information related to memory use, e.g.,
+ |	'C_CONTIGUOUS', 'OWNDATA', 'WRITEABLE', etc.
+ |  flat : numpy.flatiter object
+ |	Flattened version of the array as an iterator.	The iterator
+ |	allows assignments, e.g., ``x.flat = 3`` (See `ndarray.flat` for
+ |	assignment examples; TODO).
+ |  imag : ndarray
+:KK |	   Imaginary part of the array.
+ |  real : ndarray
+ |	Real part of the array.
+ |  size : int
+ |	Number of elements in the array.
+ |  itemsize : int
+ |	The memory use of each array element in bytes.
+ |  nbytes : int
+ |	The total number of bytes required to store the array data,
+ |	i.e., ``itemsize * size``.
+ |  ndim : int
+ |	The array's number of dimensions.
+ |  shape : tuple of ints
+ |	Shape of the array.
+ |  strides : tuple of ints
+ |	The step-size required to move from one element to the next in
+ |	memory. For example, a contiguous ``(3, 4)`` array of type
+ |	``int16`` in C-order has strides ``(8, 2)``.  This implies that
+ |	to move from element to element in memory requires jumps of 2 bytes.
+ |	To move from row-to-row, one needs to jump 8 bytes at a time
+ |	(``2 * 4``).
+ |  ctypes : ctypes object
+ |	Class containing properties of the array needed for interaction
+ |	with ctypes.
+ |  base : ndarray
+ |	If the array is a view into another array, that array is its `base`
+:KK |	   (unless that array is also a view).	The `base` array is where the
+ |	array data is actually stored.
+ |
+ |  See Also
+ |  --------
+ |  array : Construct an array.
+ |  zeros : Create an array, each element of which is zero.
+ |  empty : Create an array, but leave its allocated memory unchanged (i.e.,
+ |	    it contains "garbage").
+ |  dtype : Create a data-type.
+ |
+ |  Notes
+ |  -----
+ |  There are two modes of creating an array using ``__new__``:
+ |
+ |  1. If `buffer` is None, then only `shape`, `dtype`, and `order`
+ |     are used.
+ |  2. If `buffer` is an object exposing the buffer interface, then
+ |     all keywords are interpreted.
+ |
+ |  No ``__init__`` method is needed because the array is fully initialized
+ |  after the ``__new__`` method.
+ |
+ |  Examples
+ |  --------
+ |  These examples illustrate the low-level `ndarray` constructor.  Refer
+:KK |  to the `See Also` section above for easier ways of constructing an
+ |  ndarray.
+ |
+ |  First mode, `buffer` is None:
+ |
+ |  >>> np.ndarray(shape=(2,2), dtype=float, order='F')
+ |  array([[ -1.13698227e+002,	 4.25087011e-303],
+ |	   [  2.88528414e-306,	 3.27025015e-309]])	    #random
+ |
+ |  Second mode:
+ |
+ |  >>> np.ndarray((2,), buffer=np.array([1,2,3]),
+ |  ... 	   offset=np.int_().itemsize,
+ |  ... 	   dtype=int) # offset = 1*itemsize, i.e. skip first element
+ |  array([2, 3])
+ |
+ |  Methods defined here:
+ |
+ |  1m__abs__0m(...)
+ |	x.__abs__() <==> abs(x)
+ |
+ |  1m__add__0m(...)
+ |	x.__add__(y) <==> x+y
+ |
+ |  1m__and__0m(...)
+ |	x.__and__(y) <==> x&y
+:KK |
+ |  1m__array__0m(...)
+ |	a.__array__(|dtype) -> reference if type unchanged, copy otherwise.
+ |
+ |	Returns either a new reference to self if dtype is not given or a new array
+ |	of provided data type if dtype is different from the current dtype of the
+ |	array.
+ |
+ |  1m__array_prepare__0m(...)
+ |	a.__array_prepare__(obj) -> Object of same type as ndarray object obj.
+ |
+ |  1m__array_wrap__0m(...)
+ |	a.__array_wrap__(obj) -> Object of same type as ndarray object a.
+ |
+ |  1m__contains__0m(...)
+ |	x.__contains__(y) <==> y in x
+ |
+ |  1m__copy__0m(...)
+ |	a.__copy__([order])
+ |
+ |	Return a copy of the array.
+ |
+ |	Parameters
+ |	----------
+ |	order : {'C', 'F', 'A'}, optional
+ |	    If order is 'C' (False) then the result is contiguous (default).
+:KK |	       If order is 'Fortran' (True) then the result has fortran order.
+ |	    If order is 'Any' (None) then the result has fortran order
+ |	    only if the array already is in fortran order.
+ |
+ |  1m__deepcopy__0m(...)
+ |	a.__deepcopy__() -> Deep copy of array.
+ |
+ |	Used if copy.deepcopy is called on an array.
+ |
+ |  1m__delitem__0m(...)
+ |	x.__delitem__(y) <==> del x[y]
+ |
+ |  1m__delslice__0m(...)
+ |	x.__delslice__(i, j) <==> del x[i:j]
+ |
+ |	Use of negative indices is not supported.
+ |
+ |  1m__div__0m(...)
+ |	x.__div__(y) <==> x/y
+ |
+ |  1m__divmod__0m(...)
+ |	x.__divmod__(y) <==> divmod(x, y)
+ |
+ |  1m__eq__0m(...)
+ |	x.__eq__(y) <==> x==y
+ |
+:KK |  1m__float__0m(...)
+ |	x.__float__() <==> float(x)
+ |
+ |  1m__floordiv__0m(...)
+ |	x.__floordiv__(y) <==> x//y
+ |
+ |  1m__ge__0m(...)
+ |	x.__ge__(y) <==> x>=y
+ |
+ |  1m__getitem__0m(...)
+ |	x.__getitem__(y) <==> x[y]
+ |
+ |  1m__getslice__0m(...)
+ |	x.__getslice__(i, j) <==> x[i:j]
+ |
+ |	Use of negative indices is not supported.
+ |
+ |  1m__gt__0m(...)
+ |	x.__gt__(y) <==> x>y
+ |
+ |  1m__hex__0m(...)
+ |	x.__hex__() <==> hex(x)
+ |
+ |  1m__iadd__0m(...)
+ |	x.__iadd__(y) <==> x+=y
+ |
+:KK |  1m__iand__0m(...)
+ |	x.__iand__(y) <==> x&=y
+ |
+ |  1m__idiv__0m(...)
+ |	x.__idiv__(y) <==> x/=y
+ |
+ |  1m__ifloordiv__0m(...)
+ |	x.__ifloordiv__(y) <==> x//=y
+ |
+ |  1m__ilshift__0m(...)
+ |	x.__ilshift__(y) <==> x<<=y
+ |
+ |  1m__imod__0m(...)
+ |	x.__imod__(y) <==> x%=y
+ |
+ |  1m__imul__0m(...)
+ |	x.__imul__(y) <==> x*=y
+ |
+ |  1m__index__0m(...)
+ |	x[y:z] <==> x[y.__index__():z.__index__()]
+ |
+ |  1m__int__0m(...)
+ |	x.__int__() <==> int(x)
+ |
+ |  1m__invert__0m(...)
+ |	x.__invert__() <==> ~x
+:KK?1l?1049l
+
+0;34mIn [1;34m1150;34m]: 0mhelp(centered)
+?1049h?1hHelp on ndarray object:
+
+class 1mndarray0m(__builtin__.object)
+ |  ndarray(shape, dtype=float, buffer=None, offset=0,
+ |	    strides=None, order=None)
+ |
+ |  An array object represents a multidimensional, homogeneous array
+ |  of fixed-size items.  An associated data-type object describes the
+ |  format of each element in the array (its byte-order, how many bytes it
+ |  occupies in memory, whether it is an integer, a floating point number,
+ |  or something else, etc.)
+ |
+ |  Arrays should be constructed using `array`, `zeros` or `empty` (refer
+ |  to the See Also section below).  The parameters given here refer to
+ |  a low-level method (`ndarray(...)`) for instantiating an array.
+ |
+ |  For more information, refer to the `numpy` module and examine the
+ |  the methods and attributes of an array.
+ |
+ |  Parameters
+ |  ----------
+ |  (for the __new__ method; see Notes below)
+ |
+ |  shape : tuple of ints
+ |	Shape of created array.
+ |  dtype : data-type, optional
+:KK?1l?1049l
+
+0;34mIn [1;34m1160;34m]: 0mhelp(centered)ntre)
+0;31m---------------------------------------------------------------------------0m
+0;31mNameError0m				 Traceback (most recent call last)
+0;32m<ipython-input-116-6567835680e8>0m in 0;36m<module>0;34m()0m
+0;32m----> 10;31m 0mhelp0m0;34m(0m0mcentre0m0;34m)0m0;34m0m0m
+0m
+0;31mNameError0m: name 'centre' is not defined
+
+0;34mIn [1;34m1170;34m]: 0mhelp(centr11Per)
+?1049h?1hHelp on function center in module __main__:
+
+1mcenter0m(data, desired)
+7m(END) 27mKK?1l?1049l
+
+CCCCCCCCCCKdefecenter(data,deisresired):,centered.max().std(), centered.std()
+0;34m	.....: 0m    """
+0;34m	.....: 0m    center(data,desired): centered the data to the mean plus and  ofssetfset (desired.
+0;34m	.....: 0m    """
+0;34m	.....: 0m    resturn(datadataata-data.mean())+desired
+0;34m	.....: 0m
+
+0;34mIn [1;34m1190;34m]: 0mhelp center(center)
+?1049h?1hHelp on function center in module __main__:
+
+1mcenter0m(data, desired)
+    center(data,desired): center the data to the mean plus an offset desired.
+7m(END) 27mKK?1l?1049l
+
+0;34mIn [1;34m1200;34m]: 0mhelp(center)CCCCCCCCCCdef center(data,desired):
+    """
+    center(data,desired): center the data to the mean plus an offset desired.
+    """
+    return(data-data.mean())+desired
+0;34m	.....: 0m
+
+0;34mIn [1;34m1210;34m]: 0m
+
+0;34mIn [1;34m1210;34m]: 0m%quickref
+?1049h?1h
+IPython -- An enhanced Interactive Python - Quick Reference Card
+================================================================
+
+obj?, obj??	 : Get help, or more help for object (also works as
+		   ?obj, ??obj).
+?foo.*abc*	 : List names in 'foo' containing 'abc' in them.
+%magic		 : Information about IPython's 'magic' % functions.
+
+Magic functions are prefixed by % or %%, and typically take their arguments
+without parentheses, quotes or even commas for convenience.  Line magics take a
+single % and cell magics are prefixed with two %%.
+
+Example magic function calls:
+
+%alias d ls -F	 : 'd' is now an alias for 'ls -F'
+alias d ls -F	 : Works if 'alias' not a python name
+alist = %alias	 : Get list of aliases to 'alist'
+cd /usr/share	 : Obvious. cd -<tab> to choose from visited dirs.
+%cd??		 : See help AND source for magic %cd
+%timeit x=10	 : time the 'x=10' statement with high precision.
+%%timeit x=2**100
+x**100		 : time 'x**100' with a setup of 'x=2**100'; setup code is not
+		   counted.  This is an example of a cell magic.
+
+System commands:
+:KK
+!cp a.txt b/	 : System command escape, calls os.system()
+cp a.txt b/	 : after %rehashx, most system commands work without !
+cp ${f}.txt $bar : Variable expansion in magics and system commands
+files = !ls /usr : Capture sytem command output
+files.s, files.l, files.n: "a b c", ['a','b','c'], 'a\nb\nc'
+
+istory:
+
+_i, _ii, _iii	 : Previous, next previous, next next previous input
+_i4, _ih[2:5]	 : Input history line 4, lines 2-4
+exec _i81	 : Execute input history line #81 again
+%rep 81 	 : Edit input history line #81
+_, __, ___	 : previous, next previous, next next previous output
+_dh		 : Directory history
+_oh		 : Output history
+%hist		 : Command history of current session.
+%hist -g foo	 : Search command history of (almost) all sessions for 'foo'.
+%hist -g	 : Command history of (almost) all sessions.
+%hist 1/2-8	 : Command history containing lines 2-8 of session 1.
+%hist 1/ ~2/	 : Command history of session 1 and 2 sessions before current.
+%hist ~8/1-~6/5  : Command history from line 1 of 8 sessions ago to
+		   line 5 of 6 sessions ago.
+%edit 0/	 : Open editor to execute code with history of current session.
+
+Autocall:
+:KK
+f 1,2		 : f(1,2)  # Off by default, enable with %autocall magic.
+/f 1,2		 : f(1,2) (forced autoparen)
+,f 1 2		 : f("1","2")
+;f 1 2		 : f("1 2")
+
+Remember: TAB completion works in many contexts, not just file names
+or python names.
+
+The following magic functions are currently available:
+
+%alias:
+    Define an alias for a system command.
+%alias_magic:
+    ::
+%autocall:
+    Make functions callable without having to type parentheses.
+%autoindent:
+    Toggle autoindent on/off (if available).
+%automagic:
+    Make magic functions callable without having to type the initial %.
+%bookmark:
+    Manage IPython's bookmark system.
+%cat:
+    Callable object storing the details of one alias.
+%cd:
+:KK    Change the current working directory.
+%clear:
+    Callable object storing the details of one alias.
+%colors:
+    Switch color scheme for prompts, info system and exception handlers.
+%config:
+    configure IPython
+%cp:
+    Callable object storing the details of one alias.
+%cpaste:
+    Paste & execute a pre-formatted code block from clipboard.
+%debug:
+    ::
+%dhist:
+    Print your history of visited directories.
+%dirs:
+    Return the current directory stack.
+%doctest_mode:
+    Toggle doctest mode on and off.
+%ed:
+    Alias for `%edit`.
+%edit:
+    Bring up an editor and execute the resulting code.
+%env:
+    Get, set, or list environment variables.
+%gui:
+:KK    Enable or disable IPython GUI event loop integration.
+%hist:
+    Alias for `%history`.
+%history:
+    ::
+%install_default_config:
+    %install_default_config has been deprecated.
+%install_ext:
+    Download and install an extension from a URL, e.g.::
+%install_profiles:
+    %install_profiles has been deprecated.
+%killbgscripts:
+    Kill all BG processes started by %%script and its family.
+%ldir:
+    Callable object storing the details of one alias.
+%less:
+    Callable object storing the details of one alias.
+%lf:
+    Callable object storing the details of one alias.
+%lk:
+    Callable object storing the details of one alias.
+%ll:
+    Callable object storing the details of one alias.
+%load:
+    Load code into the current frontend.
+%load_ext:
+:KK    Load an IPython extension by its module name.
+%loadpy:
+    Alias of `%load`
+%logoff:
+    Temporarily stop logging.
+%logon:
+    Restart logging.
+%logstart:
+    Start logging anywhere in a session.
+%logstate:
+    Print the status of the logging system.
+%logstop:
+    Fully stop logging and close log file.
+%ls:
+    Callable object storing the details of one alias.
+%lsmagic:
+    List currently available magic functions.
+%lx:
+    Callable object storing the details of one alias.
+%macro:
+    Define a macro for future re-execution. It accepts ranges of history,
+%magic:
+    Print information about the magic function system.
+%man:
+    Callable object storing the details of one alias.
+%matplotlib:
+:KK    ::
+%mkdir:
+    Callable object storing the details of one alias.
+%more:
+    Callable object storing the details of one alias.
+%mv:
+    Callable object storing the details of one alias.
+%notebook:
+    ::
+%page:
+    Pretty print the object and display it through a pager.
+%paste:
+    Paste & execute a pre-formatted code block from clipboard.
+%pastebin:
+    Upload code to Github's Gist paste bin, returning the URL.
+%pdb:
+    Control the automatic calling of the pdb interactive debugger.
+%pdef:
+    Print the call signature for any callable object.
+%pdoc:
+    Print the docstring for an object.
+%pfile:
+    Print (or run through pager) the file where an object is defined.
+%pinfo:
+    Provide detailed information about an object.
+%pinfo2:
+:KK    Provide extra detailed information about an object.
+%popd:
+    Change to directory popped off the top of the stack.
+%pprint:
+    Toggle pretty printing on/off.
+%precision:
+    Set floating point precision for pretty printing.
+%profile:
+    Print your currently active IPython profile.
+%prun:
+    Run a statement through the python code profiler.
+%psearch:
+    Search for object in namespaces by wildcard.
+%psource:
+    Print (or run through pager) the source code for an object.
+%pushd:
+    Place the current dir on stack and change directory.
+%pwd:
+    Return the current working directory path.
+%pycat:
+    Show a syntax-highlighted file through a pager.
+%pylab:
+    ::
+%quickref:
+    Show a quick reference sheet
+%recall:
+:KK    Repeat a command, or get command to input line for editing.
+%rehashx:
+    Update the alias table with all executable files in $PATH.
+%reload_ext:
+    Reload an IPython extension by its module name.
+%rep:
+    Alias for `%recall`.
+%rerun:
+    Re-run previous input
+%reset:
+    Resets the namespace by removing all names defined by the user, if
+%reset_selective:
+    Resets the namespace by removing names defined by the user.
+%rm:
+    Callable object storing the details of one alias.
+%rmdir:
+    Callable object storing the details of one alias.
+%run:
+    Run the named file inside IPython as a program.
+%save:
+    Save a set of lines or a macro to a given filename.
+%sc:
+    Shell capture - run shell command and capture output (DEPRECATED use !).
+%set_env:
+    Set environment variables.	Assumptions are that either "val" is a
+%store:
+:KK    Lightweight persistence for python variables.
+%sx:
+    Shell execute - run shell command and capture output (!! is short-hand).
+%system:
+    Shell execute - run shell command and capture output (!! is short-hand).
+%tb:
+    Print the last traceback with the currently active exception mode.
+%time:
+    Time execution of a Python statement or expression.
+%timeit:
+    Time execution of a Python statement or expression
+%unalias:
+    Remove an alias
+%unload_ext:
+    Unload an IPython extension by its module name.
+%who:
+    Print all interactive variables, with some minimal formatting.
+%who_ls:
+    Return a sorted list of all interactive variables.
+%whos:
+    Like %who, but gives some extra information about each variable.
+%xdel:
+    Delete a variable, trying to clear it from anywhere that
+%xmode:
+    Switch modes for the exception handlers.
+%%!:
+:KK?1l?1049l
+0;34mIn [1;34m1220;34m]: 0m%lsmagic
+0;31mOut[1;31m1220;31m]: 0m
+Available line magics:
+%alias	%alias_magic  %autocall  %autoindent  %automagic  %bookmark  %cat  %cd	%clear	%colors  %config  %cp  %cpaste	%debug	%dhist	%dirs  %doctest_mode  %ed  %edit  %env	%gui  %hist  %history  %install_default_config	%install_ext  %install_profiles  %killbgscripts  %ldir	%less  %lf  %lk  %ll  %load  %load_ext	%loadpy  %logoff  %logon  %logstart  %logstate	%logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more	%mv  %notebook	%page  %paste  %pastebin  %pdb	%pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource	%pushd	%pwd  %pycat  %pylab  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc	%set_env  %store  %sx  %system	%tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug	%%file	%%html	%%javascript  %%latex  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit	%%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+
+0;34mIn [1;34m1230;34m]: 0m%ed!vi myfunction.py
+?1049h?1h1;27r?12;25h?12l?25h27mmH2J?25l27;1H"myfunction.py" [New File]>c2;1H94m~													   3;1H~													  4;1H~ 													 5;1H~														6;1H~													       7;1H~													      8;1H~													     9;1H~													    10;1H~													    11;1H~													    12;1H~													    13;1H~													    14;1H~													    15;1H~													    16;1H~													    17;1H~													    18;1H~													    19;1H~													    20;1H~													    21;1H~													    22;1H~													    23;1H~													    24;1H~													    25;1H~													    26;1H~													    1;1H?12l?25h?25lm27;1H1m-- INSERT --m27;13HK1;1H?12l?25h?25l38;5;130mdefm 36mcenterm(data,desired):
+    31m"""m2;8HK3;1H31m    center(data,desired): center the data to the mean plus an offset desired.m3;78HK4;1H31m    """m4;8HK5;1H    38;5;130mreturnm(data-data.mean())+desired5;37HK5;37H?12l?25h27;1HK5;36H?25l?12l?25h4;7H3;36H2;7H1;25H?25l27;1H1m-- INSERT --1;26rm1;1HL1;27r1;1H?12l?25h?25l£?12l?25h?25l1;1HK1;1H?12l?25h?25l34m#?12l?25h?25l ?12l?25h?25lT?12l?25h?25Th?12l?25h?25hi?12l?25h?25is?12l?25h?25l ?12l?25h?25lm1;7HK1;7H?12l?25h?25l1;6HK1;6H?12l?25h?2534mis?12l?25h?25l ?12l?25h?25la?12l?25h?25l ?12l?25h?25lp?12l?25h?25py?12l?25h?25yt?12l?25h?25th?12l?25h?25ho?12l?25h?25on?12l?25h?25l ?12l?25h?25lc?12l?25h?25co?12l?25h?25om?12l?25h?25mm?12l?25h?25me?12l?25h?25en?12l?25h?25nt?12l?25h?25t.?12l?25h?25l2;26rm2;1HL1;27r2;1H?12l?25h?25l3;26r3;1HL1;27r3;1H?12l?25h?25l34m#?12l?25h?25l ?12l?25h?25lT?12l?25h?25Th?12l?25h?25hi?12l?25h?25is?12l?25h?25l ?12l?25h?25la?12l?25h?25al?12l?25h?25ll?12l?25h?25lo?12l?25h?25ow?12l?25h?25ws?12l?25h?25l ?12l?25h?25ld?12l?25h?25da?12l?25h?25at?12l?25h?25ta?12l?25h?25l ?12l?25h?25lt?12l?25h?25to?12l?25h?25l ?12l?25h?25lb?12l?25h?25be?12l?25h?25l ?12l?25h?25lr?12l?25h?25re?12l?25h?25ec?12l?25h?25ce?12l?25h?25en?12l?25h?25nt?12l?25h?25tr?12l?25h?25lm3;32HK3;32H?12l?25h?2534mte?12l?25h?25er?12l?25h?25re?12l?25h?25ed?12l?25h?25d.?12l?25h?25l4;26rm4;1HL1;27r4;1H?12l?25h?25l34m#?12l?25h?25l ?12l?25h?25lW?12l?25h?25Wr?12l?25h?25ri?12l?25h?25it?12l?25h?25tt?12l?25h?25te?12l?25h?25en?12l?25h?25l ?12l?25h?25lb?12l?25h?25by?12l?25h?25l ?12l?25h?25lM?12l?25h?25Ma?12l?25h?25ar?12l?25h?25ri?12l?25h?25io?12l?25h?25l ?12l?25h?25lA?12l?25h?25An?12l?25h?25nt?12l?25h?25to?12l?25h?25on?12l?25h?25ni?12l?25h?25io?12l?25h?25ol?12l?25h?25le?12l?25h?25et?12l?25h?25tt?12l?25h?25ti?12l?25h?25l ?12l?25h?25l(?12l?25h?25(m?12l?25h?25ma?12l?25h?25ar?12l?25h?25ri?12l?25h?25io?12l?25h?25o"?12l?25h?25"e?12l?25h?25lm4;40HK4;40H?12l?25h?25l4;39HK4;39H?12l?25h?2534mo@?12l?25h?25@e?12l?25h?25ep?12l?25h?25pc?12l?25h?25cc?12l?25h?25c.?12l?25h?25.e?12l?25h?25ed?12l?25h?25d.?12l?25h?25.a?12l?25h?25ac?12l?25h?25c.?12l?25h?25.u?12l?25h?25uk?12l?25h?25k)m4;33H34m106m(19C)?12l?25hm27;1HK4;53H?25l?12l?25h?25l4;33H34m(19C)3;36H?12l?25h2;1H1;24H?25lm27;1H1m-- INSERT --1;26rm1;1HL1;27r1;1H?12l?25h?25l34m#?12l?25h?25#!?12l?25h?25!/?12l?25h?25/u?12l?25h?25us?12l?25h?25sr?12l?25h?25r/?12l?25h?25/b?12l?25h?25bi?12l?25h?25in?12l?25h?25n/?12l?25h?25/p?12l?25h?25py?12l?25h?25yt?12l?25h?25th?12l?25h?25ho?12l?25h?25on?12l?25h?25lm1;17HK1;17H?12l?25h?25l1;16HK1;16H?12l?25h?25l1;15HK1;15H?12l?25h?25l1;14HK1;14H?12l?25h?25l1;13HK1;13H?12l?25h?25l1;12HK1;12H?12l?25h?25l1;11HK1;11H?12l?25h?25l1;10HK1;10H?12l?25h?25l1;9HK1;9H?12l?25h?25l1;8HK1;8H?12l?25h?2534m/b?12l?25h?25bi?12l?25h?25in?12l?25h?25n/?12l?25h?25/e?12l?25h?25ev?12l?25h?25vn?12l?25h?25l ?12l?25h?25lp?12l?25h?25py?12l?25h?25lm1;17HK1;17H?12l?25h?25l1;16HK1;16H?12l?25h?25l1;15HK1;15H?12l?25h?25l1;14HK1;14H?12l?25h?25l1;13HK1;13H?12l?25h?2534men?12l?25h?25nv?12l?25h?25l ?12l?25h?25lp?12l?25h?25py?12l?25h?25yt?12l?25h?25th?12l?25h?25ho?12l?25h?25on?12l?25h?25l ?12l?25hm27;1HK1;22H?25l?12l?25h2;22H
+4;22H5;22H6;22H7;7H8;22H7;7H6;22H5;22H4;22H5;22H6;22H7;7H8;22H?25l27;1H"myfunction.py" [New] 10L, 297C written
+?1l?12l?25h?1049l
+0;34mIn [1;34m1240;34m]: 0m!ls data
+inflammation-01.csv	inflammation-05.csv	inflammation-09.csv	small-01.csv
+inflammation-02.csv	inflammation-06.csv	inflammation-10.csv	small-02.csv
+inflammation-03.csv	inflammation-07.csv	inflammation-11.csv	small-03.csv
+inflammation-04.csv	inflammation-08.csv	inflammation-12.csv
+
+0;34mIn [1;34m1250;34m]: 0m# analyze(filename) >  -> matplotl plotCCCCCCCCCCKedef center(data,deisred=0.0):
+0;34m	.....: 0m    """
+0;34m	.....: 0m    Return an array of centered data.
+0;34m	.....: 0m    """
+0;34m	.....: 0m    return (datadata(data-data.mean())+desired
+0;34m	.....: 0m
+
+0;34mIn [1;34m1260;34m]: 0mdef center(data,deisred=0.0):
+    """
+    Return an array of centered data.
+    """
+ACCCCCCCCCCCCCCCCCCCCCCCCCCCCC11Psired=0.0):
+
+
+
+
+0;34m	.....: 0m
+
+0;34mIn [1;34m1270;34m]: 0mdef centerdef center(data,desired=0.0):
+    """
+    Return an array of centered data.
+    """
+CCCCCCCCCCK(data-data.mean())+desiredAAAA
+K
+K
+K
+(reverse-i-search)`n': def center(data,deisred=0.0):
+    """
+    Return an array of centered data.
+    """
+    return (data-data.med':Aprinti"My weight in kg", weight_kg," and my weight in lbs ",weight_lb
+K
+K
+K
+CCCCCCCCCCKnzeros1=7numpy.zermCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+numpy.zeros	  numpy.zeros_like
+
+0;34mIn [1;34m1270;34m]: 0mzeros = numpy.zerosos(((2,2))
+
+0;34mIn [1;34m1280;34m]: 0mzeros
+0;31mOut[1;31m1280;31m]: 0m
+array([[ 0.,  0.],
+       [ 0.,  0.]])
+
+0;34mIn [1;34m1290;34m]: 0mcenter(zeros)
+0;31mOut[1;31m1290;31m]: 0m
+array([[ 0.,  0.],
+       [ 0.,  0.]])
+
+0;34mIn [1;34m1300;34m]: 0mcenter(zeros,1)
+0;31mOut[1;31m1300;31m]: 0m
+array([[ 1.,  1.],
+       [ 1.,  1.]])
+
+0;34mIn [1;34m1310;34m]: 0mcenter(zeros,1)help(numpy.loadtxt)
+?1049h?1hHelp on function loadtxt in module numpy.lib.npyio:
+
+1mloadtxt0m(fname, dtype=<type 'float'>, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
+    Load data from a text file.
+
+    Each row in the text file must have the same number of values.
+
+    Parameters
+    ----------
+    fname : file or str
+	File, filename, or generator to read.  If the filename extension is
+	``.gz`` or ``.bz2``, the file is first decompressed. Note that
+	generators should return byte strings for Python 3k.
+    dtype : data-type, optional
+	Data-type of the resulting array; default: float.  If this is a
+	record data-type, the resulting array will be 1-dimensional, and
+	each row will be interpreted as an element of the array.  In this
+	case, the number of columns used must match the number of fields in
+	the data-type.
+    comments : str, optional
+	The character used to indicate the start of a comment;
+	default: '#'.
+    delimiter : str, optional
+	The string used to separate values.  By default, this is any
+	whitespace.
+:KK?1l?1049l
+
+0;34mIn [1;34m1320;34m]: 0mdef display(1a=1,b=2,c=3):
+0;34m	.....: 0m    pritnnt @"a=",a,"b=",b,"c=",c
+0;34m	.....: 0m
+
+0;34mIn [1;34m1330;34m]: 0mdisplay()
+a= 1 b= 2 c= 3
+
+0;34mIn [1;34m1340;34m]: 0mdisplay(1P2)
+a= 2 b= 2 c= 3
+
+0;34mIn [1;34m1350;34m]: 0mdisplay(c=22)
+a= 1 b= 2 c= 22
+
+0;34mIn [1;34m1360;34m]: 0melement
+0;31mOut[1;31m1360;31m]: 0m'oxygen'
+
+0;34mIn [1;34m1370;34m]: 0mdef print_char(ELSstring):
+0;34m	.....: 0m    for char in elemntstring:
+0;34m	.....: 0m	 print char
+0;34m	.....: 0m
+
+0;34mIn [1;34m1380;34m]: 0mprint_char("Mario")
+M
+a
+r
+i
+o
+
+0;34mIn [1;34m1390;34m]: 0mprint_char("Mari11111PHippopotamus")
+
+i
+p
+p
+o
+p
+o
+t
+a
+m
+u
+s
+
+0;34mIn [1;34m1400;34m]: 0mdef length(string):
+0;34m	.....: 0m    lenthgth=0
+0;34m	.....: 0m    do for letter in string:
+0;34m	.....: 0m	 lenthgth -= length+1
+0;34m	.....: 0m	 return length
+0;34m	.....: 0m
+
+0;34mIn [1;34m1410;34m]: 0mlength("hippopotamus")
+0;31mOut[1;31m1410;31m]: 0m12
+
+0;34mIn [1;34m1420;34m]: 0m%timeit lenthgth("hippopotamus")
+1000000 loops, best of 3: 1.47 µs per loop
+
+0;34mIn [1;34m1430;34m]: 0mlen("hoippopotamus")
+0;31mOut[1;31m1430;31m]: 0m12
+
+0;34mIn [1;34m1440;34m]: 0m%timeit len("hippoopotamus")_
+The slowest run took 49.64 times longer than the fastest. This could mean that an intermediate result is being cached
+10000000 loops, best of 3: 101 ns per loop
+
+0;34mIn [1;34m1450;34m]: 0m# rev("Newton@") -> notweN
+
+0;34mIn [1;34m1460;34m]: 0mdef rev(string_:
+0;34m	.....: 0m
+
+KeyboardInterrupt
+
+0;34mIn [1;34m1460;34m]: 0mdef rev(string_:):
+0;34m	.....: 0m    length=len(string)-1
+0;34m	.....: 0m    for count in stringL:
+0;34m	.....: 0m      CCCCCCCCprint costring[countlength],
+
+KeyboardInterrupt
+
+0;34mIn [1;34m1460;34m]: 0mdef rev(string):
+    length=len(string)-1
+    for count in string:
+0;34m	.....: 0m	 print string[length],
+0;34m	.....: 0m	 length= -=1PCCCCCCCC-1
+0;34m	.....: 0m
+
+0;34mIn [1;34m1470;34m]: 0mrev*("Newton")
+n o t w e N
+
+0;34mIn [1;34m1480;34m]: 0mdef rev2(string):
+0;34m	.....: 0m    return( string[:,1P:-1]
+0;34m	.....: 0m
+
+0;34mIn [1;34m1490;34m]: 0mrev("Newton:")
+n o t w e N
+
+0;34mIn [1;34m1500;34m]: 0mrev2("Newton")
+0;31mOut[1;31m1500;31m]: 0m'notweN'
+
+0;34mIn [1;34m1510;34m]: 0m%timeit rev("Newton")
+n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w e N n o t w
+100000 loops, best of 3: 7.62 µs per loop
+
+
+0;34mIn [1;34m1520;34m]: 0mrev??
+0;31mSignature: 0m0mrev0m0;34m(0m0mstring0m0;34m)0m0;34m0m0m
+0;31mSource:0m
+def rev(string):
+    length=len(string)-1
+    for count in string:
+	print string[length],
+	length = length-1
+0;31mFile:	0m~/2015-04-16-imperial-students/python/<ipython-input-146-07b833b443ac>
+0;31mType:	0mfunction
+
+0;34mIn [1;34m1530;34m]: 0m%timeit rev("Newton")ev2("Newton")
+The slowest run took 6.65 times longer than the fastest. This could mean that an intermediate result is being cached
+1000000 loops, best of 3: 466 ns per loop
+
+0;34mIn [1;34m1540;34m]: 0mrev2??
+0;31mSignature: 0m0mrev20m0;34m(0m0mstring0m0;34m)0m0;34m0m0m
+0;31mSource:0m
+def rev2(string):
+    return string[::-1]
+0;31mFile:	0m~/2015-04-16-imperial-students/python/<ipython-input-148-44524bf77ff2>
+0;31mType:	0mfunction
+
+0;34mIn [1;34m1550;34m]: 0mnum=37
+
+0;34mIn [1;34m1560;34m]: 0mif num> > 100:
+0;34m	.....: 0m    rprint "greater"
+0;34m	.....: 0m    else:
+0;34m	.....: 0m    print "not greater"
+0;34m	.....: 0m
+not greater
+
+0;34mIn [1;34m1570;34m]: 0mif numdnuif num > 100:
+0;34m	.....: 0m     print "Greather than 100"
+0;34m	.....: 0m    elif num > 50:
+0;34m	.....: 0m    print @"gGreater than 50"
+0;34m	.....: 0m    else:
+0;34m	.....: 0m    print "Useless"
+0;34m	.....: 0m
+Useless
+
+0;34mIn [1;34m1580;34m]: 0mif (1>0) and (-1>0):
+0;34m	.....: 0m    print "Both conditions are true"
+0;34m	.....: 0m    else
+0;36m  File 0;32m"<ipython-input-158-e14d6e30a2ea>"0;36m, line 0;32m30m
+0;31m	 else0m
+0m	  ^0m
+0;31mSyntaxError0m0;31m:0m invalid syntax
+
+
+0;34mIn [1;34m1590;34m]: 0mif (1>0) and (-1>0):
+    print "Both conditions are true"
+else:
+0;34m	.....: 0m    print "One condition is trufalse"
+0;34m	.....: 0m
+One condition is false
+
+0;34mIn [1;34m1600;34m]: 0mif (1<0) or ("left"<"ruight"):
+0;34m	.....: 0m    print "True"
+0;34m	.....: 0m
+True
+
+0;34mIn [1;34m1610;34m]: 0m
+Do you really want to exit ([y]/n)? y
+bash-3.2$ exit
+exit
+
+Script done on Thu Apr 16 17:17:27 2015
